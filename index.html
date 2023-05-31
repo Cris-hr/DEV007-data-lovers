@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="homePage" id="homePageStart">
+       <div class="logo-container">
+           <img src="./img/homepagelogo.PNG" alt="imagenLogoPok">
+       </div>
+       <div class="bottom-container">
+         <div class="contenedorImg"> 
+           <img src="./img/homepage1.PNG" alt="imagenPersonajesPok">
+         </div>
+         <div class="buttons" id="startButtons">
+           <button type="button" id="resumeBtn">
+             POKERESUMEN
+           </button>
+           <button type="button" id="pokedexBtn">
+             POKEDEX
+           </button>
+          </div>
+        </div>  
+    </div>
+
+    <div class="resumePage" id="resumePageStart" style="display: none;">
+      <div class="headerResumePage">
+        <img src="./imagenes/pokemon.png" alt="logoPokemon">
+        <button type="button" id="pokedexResumePageBtn">
+          POKEDEX
+        </button>
+      </div>
+      <div class="bottomResumePage">
+         <iframe class="video"
+         width="800" 
+         height="450"   
+         src="https://www.youtube.com/embed/ymFxepbBSvQ" 
+         title="YouTube video player" 
+         frameborder="0" 
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+         </iframe>
+         <img src="./imagenes/picachu.png" alt="imagenPikachu">
+      </div>
+    </div> 
+
+
+    <div class="pageListaPoke" id="listaPokemon" style="display: none;">
+      <div class="headerPokedex">
+        <div class="leftHeader">
+          <img src="./imagenes/pokedexx.png" alt="logoPokedex" class="loguitoPokedex">
+          <img src="./imagenes/pokebolita.png" alt="logoPokebolita" class="miniPokebola">
+        </div>
+        <div class="rightHeader">
+          <div class="search-bar">
+            <input type="text" id="busquedaPokemon" placeholder="Nombre del Pokemon" required autocomplete="off">
+            <input type="image" src="./imagenes/lupita2.png" class="imagenBuscar">
+          </div>
+           <div class="menu-ordenador" id="ordenador">
+             <select id="select-ordenar">
+               <option hidden selected>Ordenar por</option>
+               <option value="asc" class="ordenar">Ascendente</option>
+               <option value="desc" class="ordenar">Descendente</option>
+              </select>
+            </div>
+            
+            <div class="filterSelect">
+              <select id="filterSelect">
+                <option hidden selected>Filtrar por</option>
+                <option value="water">Agua</option>
+                <option value="fire">Fuego</option>
+                <option value="bug">Insecto</option>
+                <option value="electric">Eléctricos</option>
+                <option value="grass">Césped</option>
+              </select>
+            </div>  
+            <button type="button" id="pokedexHomePageBtn">
+              INICIO
+            </button>
+          </div>
+      </div>
+      
+      <div class="bottomPokedex">
+        <div class="data">
+          <p id="notFound" style="display: none;"></p>
+          <div class="adentro"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="main.js" type="module"></script>
+
+</html>

@@ -1,0 +1,415 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  cursor: url(../src/img/pikachu-cursor.png), auto;
+ }
+
+ /*ESTILOS HOMEPAGE*/
+  
+ .homePage { 
+  display: flex;
+  flex-direction: column;
+  background-image: url("./img/backgroundhomepage.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.logo-container {
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.logo-container img{
+  height: 70%;
+  width: 50%;
+}
+
+.bottom-container {
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+}
+
+.contenedorImg {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.contenedorImg img {
+  width: 90%;
+  object-fit: cover;
+}
+
+.buttons{ 
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  height: 45%;
+  width: 40%;
+  align-self: center;
+  align-items: flex-end;
+  }
+
+button#resumeBtn{  /* estilo button resumen */
+  height: 30%;
+  width: 60%;
+  background-color: yellow;
+  opacity: 90%;
+  border: 1px solid yellow;
+  border-radius: 25px;
+  margin-right: 25%;
+  margin-left: 25%;
+  font-size: 240%;
+  font-weight: bold;
+  font-family: revert;
+  color: black;
+}
+
+button#pokedexBtn{   /* estilo button pokedex */
+  height: 30%;
+  width: 60%;
+  background-color: red;
+  opacity: 90%;
+  border: 1px solid red;
+  border-radius: 25px;
+  margin-right: 25%;
+  margin-left: 25%;
+  font-size: 240%;
+  font-weight: bold;
+  font-family: revert;
+  color: white;
+}
+
+/*ESTILOS RESUMEPAGE*/
+
+.resumePage {
+  display: flex;
+  background-image: url("./img/fondolista.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.resumePage img{                   
+  margin: 3% 10% 8%;                 /*tamaño del pikachu*/
+}
+
+.headerResumePage{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 15%;
+  margin-top: 1%;
+  background-color: red;
+}
+
+.headerResumePage img{
+  width: 25%;
+  height: 10vw;
+  margin-top: -1%;
+  margin-left: 2%;
+}
+
+#pokedexResumePageBtn{
+  align-self: center;
+  font-family: revert;
+  font-size: 20px;
+  padding: 0.5rem 3rem;
+  border-radius: 60px;
+  border-color: white;
+  color: rgb(61, 60, 60);
+  margin-right: 5%;
+}
+
+.bottomResumePage{
+  display: flex;
+  flex-direction: row;
+  height: 70%
+}
+
+.video{
+  margin-top: 5%;
+  margin-left: 15%;
+  border: 5px solid #1e90ff;
+  border-radius: 25px;
+}
+
+
+/*ESTILOS POKEDEX*/
+
+.pageListaPoke {
+  flex-direction: column;
+  background-image: url("./img/fondolista.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.card-imag {
+    width: 100%;          /*ancho de la imagen*/
+    height: 120px;
+    background-color: rgb(219, 215, 215);
+    border-radius: 10px;   
+}
+
+.bottomPokedex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+}
+
+.data{     
+  display: flex;
+  flex-direction: column;
+  align-items: center;                          
+  background-color: white;
+  width: 80%;                            /*ancho del contenedor blanco*/
+  height: 73vh;
+  overflow-y: scroll;
+  justify-content: center;
+  border-radius: 20px;
+  border: 9px solid rgb(1, 1, 240);
+}
+
+.adentro{                               /*contenedor de las cartas*/
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  width: 100%;                            /*ancho del contenedor blanco*/
+  height: 73vh;
+  overflow-y: scroll;
+  justify-content: center;
+  gap: 25px;                             /*separar las cartas*/
+}
+
+.mostrar {
+  width: 200px;
+  height: 270px;                          /*largo de la tarjeta*/
+  perspective: 800px;
+  margin: 20px;                           /*espacio entre cada fila*/
+  border: 6px solid rgb(160, 158, 158); 
+  border-radius: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card__inner {                   /* para hacer que gire las cards*/
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.mostrar:hover .card__inner {       /* para hacer que gire las cards*/
+  transform: rotateY(-180deg);
+}
+
+.card__side {                       /* para hacer que gire las cards*/
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-rows: 115px 1fr;
+  backface-visibility: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card__side--back {                    /* para hacer que gire las cards*/
+  transform: rotateY(180deg);
+  background:rgb(25, 26, 25);
+  color: rgb(228, 228, 44);
+}
+
+.headerPokedex {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1%;
+  background-color: red;
+}
+
+.leftHeader {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+}
+
+.rightHeader {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.loguitoPokedex {
+  width: 70%;
+  object-fit: contain;
+}
+
+.miniPokebola {
+  width: 30%;
+  object-fit: contain;
+}
+
+.search-bar {
+  background: white;          /*color de fondo del "contenedor" del input y el boton*/
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+.search-bar input{
+  border: 0;
+  position: relative;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  color: black;               /*color de letra del imput al escribir*/
+}
+
+.imagenBuscar{
+  width: 15px;                       /*ancho de la img del boton*/
+  height: 15px;
+}
+
+#busquedaPokemon::placeholder{
+  color: rgb(170, 163, 163);             /*color letra del placeholder*/
+}
+  
+.search-bar button{
+  border: 0;                        /*quitarle el borde*/
+  border-radius: 50%;
+  width: 23px;                      /*ancho del boton*/
+  height: 23px;
+  background: #58629b;           /*fondo del boton*/
+  cursor: pointer;
+}
+
+#pokedexHomePageBtn{
+  font-size: 20px;
+  padding: 0.5rem 3rem;
+  border-radius: 60px;
+  border-color: white;
+  color: rgb(61, 60, 60);
+  cursor: pointer;
+}
+
+#filterSelect{
+  font-size: 16px;
+  padding: 0.5rem 3rem 0.5rem 0.5rem;
+  border-radius: 60px;
+  color: rgb(170, 163, 163);
+  cursor: pointer;
+}
+
+#select-ordenar {
+  font-size: 16px;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  border-radius: 60px;
+  color: rgb(170, 163, 163); 
+  cursor: pointer;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 390px){
+  
+  .homePage { 
+    display: flex;
+    flex-direction: column;
+    background-image: url("./img/backgroundhomepage.JPG");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  .logo-container {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .logo-container img{
+    height: 15vh;
+    width: 100%;
+    object-fit: contain;
+    margin-top: 5%;
+  }
+
+  .bottom-container {
+    height: 100%;
+    display: flex;
+    /*flex-direction: row;*/
+  }  
+  
+  .contenedorImg {
+    display: none;
+  }
+  
+  .buttons{ 
+    align-items:flex-start;
+    }
+  
+  button#resumeBtn{  /* estilo button resumen */
+    height: 8vh;
+    width: 205%;     /* alerta */
+    background-color: yellow;
+    opacity: 90%;
+    border: 1px solid yellow;
+    border-radius: 25px;
+    margin-right: 25%;
+    font-size: 230%;
+    font-weight: bold;
+    font-family: revert;
+    color: black;
+  }
+  
+  button#pokedexBtn{   /* estilo button pokedex */
+    height: 8vh;
+    width: 205%;       /* alerta */
+    background-color: red;
+    opacity: 90%;
+    border: 1px solid red;
+    border-radius: 25px;
+    margin-right: 25%;
+    font-size: 230%;
+    font-weight: bold;
+    font-family: revert;
+    color: white;
+  }
+  
+
+}
