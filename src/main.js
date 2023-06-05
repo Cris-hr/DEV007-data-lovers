@@ -39,7 +39,7 @@ data.pokemon.forEach((pokemones) => {
                <p class="numeroPokemon" >${pokemones.num}</p>
                <h3>${pokemones.name}</h3>
                 <div class="poder">
-                 <p>tipo: ${pokemones.type}</p>
+                 <p>type: ${pokemones.type}</p>
                   <div class= "generacion">
                     <p>${pokemones.generation.num} - ${pokemones.generation.name}</p>        
                   </div>
@@ -53,8 +53,7 @@ data.pokemon.forEach((pokemones) => {
                  <div class = "resistencia">
                    <p>RESISTENCIA:</p>
                    <p class= "parrafo">${pokemones.resistant[0]} , ${pokemones.resistant[1]}</p>
-                   <p class= "parrafo">${pokemones.resistant[2]} , ${pokemones.resistant[3]}</p>
-                   <p class= "parrafo">${pokemones.resistant[4]}</p>
+                   <p class= "parrafo">${pokemones.resistant[2]}</p>
                  </div>
               </div>
           </div>      
@@ -78,7 +77,7 @@ function displayFilteredData(filteredData) {
              <p class="numeroPokemon" >${pokemones.num}</p>
              <h3>${pokemones.name}</h3>
               <div class="poder">
-               <p>tipo: ${pokemones.type}</p>
+               <p>type: ${pokemones.type}</p>
                 <div class= "generacion">
                   <p>${pokemones.generation.num} - ${pokemones.generation.name}</p>        
                 </div>
@@ -92,8 +91,7 @@ function displayFilteredData(filteredData) {
                <div class = "resistencia">
                  <p>RESISTENCIA:</p>
                  <p class= "parrafo">${pokemones.resistant[0]} , ${pokemones.resistant[1]}</p>
-                 <p class= "parrafo">${pokemones.resistant[2]} , ${pokemones.resistant[3]}</p>
-                 <p class= "parrafo">${pokemones.resistant[4]}</p>
+                 <p class= "parrafo">${pokemones.resistant[2]}</p>
                </div>
             </div>
         </div>      
