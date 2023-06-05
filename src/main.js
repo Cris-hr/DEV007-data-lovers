@@ -125,17 +125,17 @@ document.getElementById("filterSelect").addEventListener("change", function () {
   } else if (filterValue === "fire") {
     
     filteredData = filterByType(data.pokemon, "fire");
-  } else if (filterValue === "bug") {
+  } else if (filterValue === "poison") {
     
-    filteredData = filterByType(data.pokemon, "bug"); 
+    filteredData = filterByType(data.pokemon, "poison"); 
 
   }else if (filterValue === "electric") {
     
     filteredData = filterByType(data.pokemon, "electric"); 
   
-  }else if (filterValue === "grass") {
+  }else if (filterValue === "psychic") {
     
-    filteredData = filterByType(data.pokemon, "grass"); 
+    filteredData = filterByType(data.pokemon, "psychic"); 
   
   }else {
 
